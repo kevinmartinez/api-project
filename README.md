@@ -13,8 +13,13 @@ You can try the app at <http://www>
 >
 >+ *HTML*
 >+ *CSS*
+>   + *SCSS*
 >+ *JavaScript*
 >
+>+ TOOLS
+>   + *Gulp.js*
+>   + *npm*
+>   + *Bower.js*
 > <br/>
 
 ### Workflow
