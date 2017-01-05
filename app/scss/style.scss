@@ -1,7 +1,6 @@
-body {
-    background: red;
-    &:hover {
-        color: green;
-        background: yellow;
-    }
+$main-color: #fff;
+
+#main-header {
+    padding: 50px;
+    color: $main-color;
 }
