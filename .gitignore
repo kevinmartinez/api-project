@@ -1,0 +1,9 @@
+# folders
+node_modules
+bower_modules
+
+# files
+bower.json
+gulpfile.js
+package.json
+.DS_Store
