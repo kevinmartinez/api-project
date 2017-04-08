@@ -2,20 +2,39 @@
 <html lang="sv-SE">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YHJUST16 Web Development - Final Task</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header id="mainHeader">
-        <h1 class="main-heading">Count</h1>
+        <h1 class="text-center main-heading">Count</h1>
     </header>
     <main>
         <!--<p>Search by recipe or ingredients</p>-->
         <form class="search-form" id="searchForm">
-            <label for="search">Sök</label>
-            <input id="textInput" class="text-input" type="text" name="search" placeholder="Produkt">
-            <button id="searchBtn" class="search-btn" type="submit">Hitta</button>
+            <section class="count-flat-bg-blue-1">
+                <!--<label for="search">Sök</label>-->
+                <input class="text-input" type="text" name="search" placeholder="Protein">
+                <button class="search-btn" type="submit">Hitta</button>         
+            </section>
+            <section class="count-flat-bg-yellow-1">
+                <!--<label for="search">Sök</label>-->
+                <input class="text-input" type="text" name="search" placeholder="Fett">
+                <button class="search-btn" type="submit">Hitta</button>         
+            </section>
+            <section class="count-flat-bg-green-1">
+                <!--<label for="search">Sök</label>-->
+                <input class="text-input" type="text" name="search" placeholder="Kolhydrater">
+                <button class="search-btn" type="submit">Hitta</button>
+            </section>
+            <section class="count-flat-bg-purple-1">
+                <!--<label for="search">Sök</label>-->
+                <input class="text-input" type="text" name="search" placeholder="Produkt">
+                <button class="search-btn" type="submit">Hitta</button>
+            </section>
         </form>
     </main>
     <footer>
