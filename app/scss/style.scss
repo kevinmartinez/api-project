@@ -12,7 +12,11 @@ $mid: "(min-width 768px)";
 
 body {
     font-family: 'Droid Sans', sans-serif;
-    background: #e76b6b;
+    background: url(../img/cup.svg) no-repeat center;
+    background-color: #8194BF;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .search-form {
@@ -61,9 +65,9 @@ body {
 
 // only 1 main heading in our app
 .main-heading {
+    color: #344146;
     font-size: 40px;
     text-transform: uppercase;
-    color: $white; // using sass variable
     font-weight: 600;
 }
 
@@ -85,10 +89,12 @@ body {
 
 .count-flat-bg-yellow-1 {
     background: #f1c40f;
+    opacity: 0.5;
 }
 
 .count-flat-bg-blue-1 {
     background: #2C82C9;
+    opacity: 0.5;
 }
 
 .count-flat-bg-green-1 {
