@@ -1,28 +1,31 @@
 // Some AJAX testing
 var xhr = new XMLHttpRequest(); // Create an XHR request object
-var url = 'http://mardby.se/AJK15G/lorem_text.php'; // URL where request is sent
+var url = 'https://teamtreehouse.com/kevinpixelkojan.json'; // URL where request is sent
 var sendText = '?numberOfWords=10'; // Querystring
 
 var getAjax = document.getElementById('getAjax');
 var ajaxResponse = document.getElementById('ajaxResponse');
 
-    // Callback function to process return data asynchronously (event handler)
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) { // readyState = 4, check server response
-            if (xhr.status === 200) { // More defensevly than using && in first if-statement, status 200 = OK
-                // Write to ajaxResponse div
-                ajaxResponse.innerHTML = '<p>' + xhr.responseText + '</p>';
-            } else if (xhr.status === 404) {
-                // File Not Found
-            } else if (xhr.status === 500) {
-                // server problem
-            } 
-        }
-    };
+// Callback function to process return data asynchronously (event handler)
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) { // readyState = 4, check server response
+        if (xhr.status === 200) { // More defensevly than using && in first if-statement, status 200 = OK
+            // Write to ajaxResponse div
+            //ajaxResponse.innerHTML = '<p>' + xhr.responseText + '</p>';
+            console.log(typeof xhr.responseText);
+            var treehouseData = JSON.parse(xhr.responseText);
+            console.log(typeof treehouseData);
+        } else if (xhr.status === 404) {
+            // File Not Found
+        } else if (xhr.status === 500) {
+            // server problem
+        } 
+    }
+};
     
 
-    getAjax.addEventListener('click', function(e) {
-    xhr.open('GET', url + sendText);
+getAjax.addEventListener('click', function(e) {
+    xhr.open('GET', url);
     xhr.send(); // Sending off the request to the server
     e.preventDefault();
 });
