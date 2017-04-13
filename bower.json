@@ -1,0 +1,24 @@
+{
+  "name": "api-project",
+  "description": "Project description.",
+  "main": "index.js",
+  "authors": [
+    "Kevin <kevin@pixelkojan.se>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kevinmartinez/api-project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.3.0",
+    "normalize-css": "^6.0.0"
+  },
+  "install": {
+    "path": "app/dependencies"
+  }
+}
