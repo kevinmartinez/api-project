@@ -1,4 +1,4 @@
-# API Project
+# API Project - Shake
 Project description.
 
 ## Live
@@ -15,11 +15,12 @@ You can try the app at <http://www>
 >+ *CSS*
 >   + *SCSS*
 >+ *JavaScript*
+>+ *SVG*
 >
 >+ TOOLS
 >   + *Gulp.js*
 >   + *npm*
->   + *Bower.js*
+>   + *Bower.js* for Front-End Dependecies
 > <br/>
 
 ### Workflow
