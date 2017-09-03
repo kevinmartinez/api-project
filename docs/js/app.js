@@ -65,7 +65,7 @@
 //     }
 //     xhr.send(null);
 var xhr = new XMLHttpRequest();
-var url = 'http://matapi.se/foodstuff?query=ban';
+var url = 'https://matapi.se/foodstuff?query=ban';
 
 
   if(xhr) {    
