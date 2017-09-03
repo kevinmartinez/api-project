@@ -21,3 +21,16 @@ gulp.task('browserSync', function(){
         files: ['app/*.html', 'app/css/*.css', 'app/js/*.js']
     });
 });
+
+gulp.task('watch', function() {
+    // ** is a so called globbing pattern
+    gulp.watch('./app/scss/**/*.scss', ['compileSass']);
+});
+
+// Our build task
+gulp.task('build', ['watch', 'browserSync'], function() {
+
+});
+
+// The dependencies are in the second arg in array form
+gulp.task('default', ['build']);
