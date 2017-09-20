@@ -1,110 +1,224 @@
-$white: #fff;
-$black: #25373d;
-$grey: #60646d;
-$dark-blue: #2C82C9;
+// Use BEM naming convention
 
-// media query variable
-$mid: "(min-width 768px)";
+// Font variables
+$header-main-font: 'Droid Sans', sans-serif;
+
+// Color variables
+$header-black: #323A45;
+$dream-green: #78C0A8;
 
 * {
-    box-sizing: border-box; // global box-model control
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Droid Sans', sans-serif;
-    background: url(../img/cup.svg) no-repeat center;
-    background-color: #8194BF;
-    padding-top: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.search-form {
-    display: flex; /* Using flex for most of layout */
-    flex-direction: column; /* because default value is row */
+// Font scaling for small/mobile
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1.1em;
+}
+p {
+    font-size: 1em;
 }
 
-.text-input {
-    font-family: 'Droid Sans', sans-serif;
-    background: none;
-    color: $white;
+// Block in (B)EM
+.header {
+    font-family: $header-main-font;
+
+    text-transform: uppercase;
+    padding: 2em;
+    color: $header-black;
+}
+
+.search {
+    border: 5px solid goldenrod;
+}
+
+.search__input {
+    display: block;
+
+
+    font-size: 1em;
+    margin: 0;
+
+    font    : .9em/1.5em "handwriting", sans-serif;
+
+      border  : none;
+      padding : 15px;
+      margin  : 0;
+      width: 100%;
+
+      background: none;
+}
+
+input:focus, textarea:focus {
+    background   : rgba(0,0,0,.1);
+    border-radius: 5px;
+    outline      : none;
+  }
+
+.btn {
     width: 100%;
-    font-size: 1.5rem;
-}
-
-.text-input {
-    float: left;
-    width: 70%;
-    padding: 15px 0;
-    border: 0;
-    font-weight: 400;
-}
-
-
-.text-input::placeholder {
-    color: $white;
-}
-
-.search-btn {
-    font-family: 'Droid Sans', sans-serif;
-    float: right;
-    font-size: 1.5rem;
-    width: 30%;
-    padding: 15px 0;
-    font-weight: 400;
-}
-
-// Text field search button
-.search-btn {
-    background: #44bbff;
-    color: #eee;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-// only 1 main heading in our app
-.main-heading {
-    color: #344146;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-// Text alignment helper class
-.text-center {
-    text-align: center;
-}
-
-
-
-
-
-.count-flat-bg-yellow-1,
-.count-flat-bg-blue-1,
-.count-flat-bg-green-1,
-.count-flat-bg-purple-1 {
     padding: 1em;
+    background-color: $dream-green;
 }
 
-.count-flat-bg-yellow-1 {
-    background: #f1c40f;
-    opacity: 0.5;
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
 }
 
-.count-flat-bg-blue-1 {
-    background: #2C82C9;
-    opacity: 0.5;
+#weatherBox {
+    height: 200px;
 }
 
-.count-flat-bg-green-1 {
-    background: #53df83;
+// Test weather CSS
+// Default setting
+.sky {
+    background-color: lightblue;
+    border-bottom: 5px dashed blue;
 }
 
-.count-flat-bg-purple-1 {
-    background: #897FBA;
+.cloud {
+    max-width: 100px;
+    color: blue;
 }
 
-::placeholder::focus {
-    color: $white;
+.ground {
+    background-color: green;
 }
+
+
+
+
+// $white: #fff;
+// $black: #25373d;
+// $grey: #60646d;
+// $dark-blue: #2C82C9;
+
+// // media query variable
+// $mid: "(min-width 768px)";
+
+// * {
+//     box-sizing: border-box; // global box-model control
+// }
+
+// #weather {
+//     min-height: 100px;
+//     background: lightblue;
+//     border: 5px solid goldenrod;
+// }
+
+// // Test weather changes
+// .cloudy {
+//     background: grey;
+// }
+
+// body {
+//     font-family: 'Droid Sans', sans-serif;
+//     background: url(../img/cup.svg) no-repeat center;
+//     background-color: #8194BF;
+//     padding-top: 100px;
+//     padding-left: 30px;
+//     padding-right: 30px;
+// }
+
+// .search-form {
+//     display: flex; /* Using flex for most of layout */
+//     flex-direction: column; /* because default value is row */
+// }
+
+// .text-input {
+//     font-family: 'Droid Sans', sans-serif;
+//     background: none;
+//     color: $white;
+//     width: 100%;
+//     font-size: 1.5rem;
+// }
+
+// .text-input {
+//     float: left;
+//     width: 70%;
+//     padding: 15px 0;
+//     border: 0;
+//     font-weight: 400;
+// }
+
+
+// .text-input::placeholder {
+//     color: $white;
+// }
+
+// .search-btn {
+//     font-family: 'Droid Sans', sans-serif;
+//     float: right;
+//     font-size: 1.5rem;
+//     width: 30%;
+//     padding: 15px 0;
+//     font-weight: 400;
+// }
+
+// // Text field search button
+// .search-btn {
+//     background: #44bbff;
+//     color: #eee;
+//     border: none;
+//     text-transform: uppercase;
+//     letter-spacing: 1px;
+// }
+
+// // only 1 main heading in our app
+// .main-heading {
+//     color: #344146;
+//     font-size: 40px;
+//     text-transform: uppercase;
+//     font-weight: 600;
+// }
+
+// // Text alignment helper class
+// .text-center {
+//     text-align: center;
+// }
+
+
+
+
+
+// .count-flat-bg-yellow-1,
+// .count-flat-bg-blue-1,
+// .count-flat-bg-green-1,
+// .count-flat-bg-purple-1 {
+//     padding: 1em;
+// }
+
+// .count-flat-bg-yellow-1 {
+//     background: #f1c40f;
+//     opacity: 0.5;
+// }
+
+// .count-flat-bg-blue-1 {
+//     background: #2C82C9;
+//     opacity: 0.5;
+// }
+
+// .count-flat-bg-green-1 {
+//     background: #53df83;
+// }
+
+// .count-flat-bg-purple-1 {
+//     background: #897FBA;
+// }
+
+// ::placeholder::focus {
+//     color: $white;
+// }
