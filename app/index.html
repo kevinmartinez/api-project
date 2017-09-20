@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html lang="sv-SE">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>YHJUST16 Web Development - Final Task</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header id="mainHeader">
-        <h1 class="text-center main-heading">Shake</h1>
-    </header>
-    <main>
-        <!--<p>Search by recipe or ingredients</p>-->
-        <form class="search-form" id="searchForm">
-            <section class="count-flat-bg-blue-1">
-                <!--<label for="search">Sök</label>-->
-                <input class="text-input" type="text" name="search" placeholder="Protein">
-                <button class="search-btn" type="submit">Hitta</button>
-            </section>
-        </form>
-        <section>
-            <!-- placeholder for incoming data -->
-            <div id="ajaxResponse">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>City Weather</title>
+        <meta name="description" content="Want to see some info about a city? Use this weather checking web application">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./dependencies/normalize-css/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-            </div>
-            <button type="submit" id="getAjax">Get AJAX</button>
-        </section>
-    </main>
-    <footer>
-        <p class="contact">&copy;2017 Kevin Martinez</p>
-    </footer>
-    <script src="js/app.js"></script>
-</body>
+        <!-- App main header -->
+        <header class="header">
+            <h1>Welcome to the Weather App</h1>alt="">
+        </header>
+        <!-- App main body -->
+        <main>
+            <!-- Content main header -->
+            <header class="header">
+                <h2>Want to know the weather in a city?</h2>
+                <p>If so, search and find out...</p>
+            </header>
+            <section>
+                <!-- Ajax response -->
+                <div id="weather"></div>
+            </section>
+            <!-- Search area -->
+            <form class="search">
+                <input class="search__input" type="search" name="q" placeholder="This City was built on Rock n' Roll">
+                <button class="search__btn">Search</button>
+            </form>
+        </main>
+        <!-- Main footer -->
+        <footer>
+            <!-- Footer header -->
+            <header class="header">
+                &copy; 2017 - Kevin Martinez
+            </header>
+        </footer>
+    </body>
 </html>
