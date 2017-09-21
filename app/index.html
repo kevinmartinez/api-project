@@ -18,32 +18,35 @@
         <![endif]-->
 
         <!-- App main header -->
-        <header class="header">
-            <h1>Welcome to the Weather App</h1>alt="">
+        <header class="header header--sky">
+            <h1 class="header__heading">Welcome to the Weather App</h1>
+            <img class="cloud" src="./img/cloud-icon.svg" alt="">
         </header>
         <!-- App main body -->
         <main>
             <!-- Content main header -->
             <header class="header">
-                <h2>Want to know the weather in a city?</h2>
+                <h2 class="header__heading">Want to know the weather in a city?</h2>
                 <p>If so, search and find out...</p>
             </header>
             <section>
                 <!-- Ajax response -->
                 <div id="weather"></div>
             </section>
-            <!-- Search area -->
-            <form class="search">
-                <input class="search__input" type="search" name="q" placeholder="This City was built on Rock n' Roll">
+            <form class="search" role="search">
+                <input class="search__input" type="search" name="q" placeholder="This City was built on Rock n' Roll" aria-label="Search for a city's temperature" required>
+                <input class="search__input" type="search" placeholder="Country">
                 <button class="search__btn">Search</button>
             </form>
         </main>
         <!-- Main footer -->
-        <footer>
+        <footer class="ground">
             <!-- Footer header -->
             <header class="header">
                 &copy; 2017 - Kevin Martinez
             </header>
         </footer>
+    <script src="./dependencies/jquery/jquery.js"></script>
+    <script src="./js/ajax.js"></script>
     </body>
 </html>

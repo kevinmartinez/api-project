@@ -1,224 +1,177 @@
-// Use BEM naming convention
+/* This Sass, Scss and CSS :) is written by me, Kevin Martinez */
+
+/*
+
+I will try to use the BEM methodology as naming convention,
+but also for trying more advanced uses of Sass.
+I will do my best to split up my Sass content into partials for more modularity,
+for that i will try to follow the SMACSS approach (Scalable and modular CSS).
+Big thx to css-tricks and teamtreehouse
+
+*/
+
+* {
+  box-sizing: border-box; // global box-model control
+}
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// media query variable
+$mid: "(min-width 768px)";
+
+// Text alignment helper class
+.text-center {
+  text-align: center;
+}
+// ::placeholder::focus {
+//   color: $white;
+// }
 
 // Font variables
 $header-main-font: 'Droid Sans', sans-serif;
 
 // Color variables
-$header-black: #323A45;
+$black: #323A45;
 $dream-green: #78C0A8;
+$yellow-flat: #f1c40f;
+$blue-flat: #2C82C9;
+$green-flat: #53df83;
+$purple-flat: #897FBA;
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
+// Sky color variables
+$clouds: #ECF0F1;
+$clear: #85E2FF;
+$rain: #C4C4C4;
+$storm: #02222B;
+$snow:#F9F8E4;
+$mist: #FEFCFF;
 
 // Font scaling for small/mobile
 h1 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 h2 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 h3 {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 p {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 // Block in (B)EM
-.header {
-    font-family: $header-main-font;
 
-    text-transform: uppercase;
-    padding: 2em;
-    color: $header-black;
-}
-
-.search {
-    border: 5px solid goldenrod;
-}
-
-.search__input {
-    display: block;
-
-
-    font-size: 1em;
-    margin: 0;
-
-    font    : .9em/1.5em "handwriting", sans-serif;
-
-      border  : none;
-      padding : 15px;
-      margin  : 0;
-      width: 100%;
-
-      background: none;
-}
-
-input:focus, textarea:focus {
-    background   : rgba(0,0,0,.1);
-    border-radius: 5px;
-    outline      : none;
-  }
-
-.btn {
-    width: 100%;
-    padding: 1em;
-    background-color: $dream-green;
-}
-
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
-  border-radius: 5px;
-  outline      : none;
-}
-
-#weatherBox {
-    height: 200px;
-}
-
-// Test weather CSS
-// Default setting
-.sky {
-    background-color: lightblue;
-    border-bottom: 5px dashed blue;
-}
-
-.cloud {
-    max-width: 100px;
-    color: blue;
-}
-
-.ground {
-    background-color: green;
-}
-
-
-
-
-// $white: #fff;
-// $black: #25373d;
-// $grey: #60646d;
-// $dark-blue: #2C82C9;
-
-// // media query variable
-// $mid: "(min-width 768px)";
-
-// * {
-//     box-sizing: border-box; // global box-model control
-// }
-
-// #weather {
-//     min-height: 100px;
-//     background: lightblue;
+// // Everything below is the first BEM code i wrote
+// .search {
 //     border: 5px solid goldenrod;
 // }
 
-// // Test weather changes
-// .cloudy {
-//     background: grey;
-// }
-
-// body {
-//     font-family: 'Droid Sans', sans-serif;
-//     background: url(../img/cup.svg) no-repeat center;
-//     background-color: #8194BF;
-//     padding-top: 100px;
-//     padding-left: 30px;
-//     padding-right: 30px;
-// }
-
-// .search-form {
-//     display: flex; /* Using flex for most of layout */
-//     flex-direction: column; /* because default value is row */
-// }
-
-// .text-input {
-//     font-family: 'Droid Sans', sans-serif;
-//     background: none;
-//     color: $white;
+// .search__input {
+//     display: block;
 //     width: 100%;
-//     font-size: 1.5rem;
+//     font-size: 1em;
+//     margin: 0;
+//     border  : none;
+//     padding : 15px;
+//     margin  : 0;
+//     background: none;
 // }
 
-// .text-input {
-//     float: left;
-//     width: 70%;
-//     padding: 15px 0;
-//     border: 0;
-//     font-weight: 400;
-// }
+// input:focus, textarea:focus {
+//     background: rgba(0,0,0,.1);
+//     border-radius: 5px;
+//     outline: none;
+//   }
 
-
-// .text-input::placeholder {
-//     color: $white;
-// }
-
-// .search-btn {
-//     font-family: 'Droid Sans', sans-serif;
-//     float: right;
-//     font-size: 1.5rem;
-//     width: 30%;
-//     padding: 15px 0;
-//     font-weight: 400;
-// }
-
-// // Text field search button
-// .search-btn {
-//     background: #44bbff;
-//     color: #eee;
-//     border: none;
-//     text-transform: uppercase;
-//     letter-spacing: 1px;
-// }
-
-// // only 1 main heading in our app
-// .main-heading {
-//     color: #344146;
-//     font-size: 40px;
-//     text-transform: uppercase;
-//     font-weight: 600;
-// }
-
-// // Text alignment helper class
-// .text-center {
-//     text-align: center;
-// }
-
-
-
-
-
-// .count-flat-bg-yellow-1,
-// .count-flat-bg-blue-1,
-// .count-flat-bg-green-1,
-// .count-flat-bg-purple-1 {
+// .search__btn {
+//     width: 100%;
 //     padding: 1em;
+//     background-color: $dream-green;
 // }
 
-// .count-flat-bg-yellow-1 {
-//     background: #f1c40f;
-//     opacity: 0.5;
-// }
 
-// .count-flat-bg-blue-1 {
-//     background: #2C82C9;
-//     opacity: 0.5;
-// }
+// Using Sass parent selectors to write element and modifier classes for my blocks
 
-// .count-flat-bg-green-1 {
-//     background: #53df83;
-// }
 
-// .count-flat-bg-purple-1 {
-//     background: #897FBA;
-// }
+// Block
+.search {
+  border: 5px solid goldenrod;
+  // Block__Element
+  &__input {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    margin: 0;
+    border  : none;
+    padding : 15px;
+    margin  : 0;
+    background: none;
+    &:focus {
+      background: rgba(0,0,0,.1);
+      border-radius: 5px;
+      outline: none;
+    }
+    // block__element--modifier
+    &--city {
+        border: 1px solid red;
+    }
+  }
+  // block__element
+  // search btn variation
+  &__btn {
+    width: 100%;
+    padding: 1em;
+    background-color: $dream-green;
+  }
+  // // Block--Modifer
+  // &--modifier {
 
-// ::placeholder::focus {
-//     color: $white;
-// }
+  // }
+}
+
+
+
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+.header {
+  // block
+  font-family: $header-main-font;
+  padding: 2em;
+  @include element('heading') {
+    // block__element
+    // header__heading
+    color: $black;
+    text-transform: uppercase;
+    &::first-letter {
+        color: red;
+    }
+  }
+  // block--modifier
+  // header--sky, change sky according to weather
+  @include modifier('sky') {
+  // background-color: crimson;
+  // background-color: red;
+  // border-bottom: 5px dashed blue;
+  }
+}
