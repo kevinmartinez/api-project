@@ -1,0 +1,29 @@
+// media query variable
+$mid: "(min-width 768px)";
+
+// Text alignment helper class
+.text-center {
+  text-align: center;
+}
+// ::placeholder::focus {
+//   color: $white;
+// }
+
+// Font variables
+$header-main-font: 'Droid Sans', sans-serif;
+
+// Color variables
+$black: #323A45;
+$dream-green: #78C0A8;
+$yellow-flat: #f1c40f;
+$blue-flat: #2C82C9;
+$green-flat: #53df83;
+$purple-flat: #897FBA;
+
+// Sky color variables
+$clouds: #ECF0F1;
+$clear: #85E2FF;
+$rain: #C4C4C4;
+$storm: #02222B;
+$snow:#F9F8E4;
+$mist: #FEFCFF;

@@ -13,15 +13,6 @@ gulp.task('compileSass', function() {
         .pipe(gulp.dest('./dist/css'));// Where the compiled code will go
 });
 
-// Run Browsersync with server config
-// TODO: put together a function that compiles sass AND reloads with browser-sync
-gulp.task('browserSync', function(){
-        browserSync({
-        server: 'app',
-        files: ['app/*.html', 'app/css/*.css', 'app/js/*.js']
-    });
-});
-
 // Concat js files
 gulp.task('concatJS', function() {
     return gulp.src('./app/js/ajax.js')
@@ -29,7 +20,7 @@ gulp.task('concatJS', function() {
         .pipe(gulp.dest('./dist/js'));
 });
 
-// Serve html files to dist
+//Serve html files to dist
 gulp.task('serveHTML', function() {
     return gulp.src('./app/index.html')
     .pipe(gulp.dest('./dist'));
@@ -40,6 +31,15 @@ gulp.task('watch', function() {
     gulp.watch('./app/scss/**/*.scss', ['compileSass']);
     gulp.watch('./app/js/**/*.js', ['concatJS']);
     gulp.watch('./app/*.html', ['serveHTML'])
+});
+
+// Run Browsersync with server config
+// TODO: put together a function that compiles sass AND reloads with browser-sync
+gulp.task('browserSync', function(){
+    browserSync({
+        server: 'app',
+        files: ['app/*.html', 'app/css/*.css', 'app/js/*.js']
+    });
 });
 
 // Our build task

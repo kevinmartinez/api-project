@@ -1,0 +1,10 @@
+.l-container {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .l-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

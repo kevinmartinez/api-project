@@ -1,0 +1,106 @@
+// Block in (B)EM
+
+// // Everything below is the first BEM code i wrote
+// .search {
+//     border: 5px solid goldenrod;
+// }
+
+// .search__input {
+//     display: block;
+//     width: 100%;
+//     font-size: 1em;
+//     margin: 0;
+//     border  : none;
+//     padding : 15px;
+//     margin  : 0;
+//     background: none;
+// }
+
+// input:focus, textarea:focus {
+//     background: rgba(0,0,0,.1);
+//     border-radius: 5px;
+//     outline: none;
+//   }
+
+// .search__btn {
+//     width: 100%;
+//     padding: 1em;
+//     background-color: $dream-green;
+// }
+
+
+// Using Sass parent selectors to write element and modifier classes for my blocks
+
+
+// Block
+.search {
+  // Block__Element
+  &__input {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    margin: 0;
+    border  : none;
+    padding : 15px;
+    margin  : 0;
+    background: none;
+    &:focus {
+      background: rgba(0,0,0,.1);
+      outline: none;
+    }
+    // block__element--modifier
+    &--city {
+        border: 1px solid red;
+    }
+  }
+  // block__element
+  // search btn variation
+  &__btn {
+    width: 100%;
+    padding: 1em;
+    background-color: $dream-green;
+  }
+  // // Block--Modifer
+  // &--modifier {
+
+  // }
+}
+
+// @media screen and (min-width: 768px) {
+//   .search {
+//     max-width: 50%;
+//     // Block__Element
+//     &__input {
+//       display: block;
+//       width: 100%;
+//       font-size: 1em;
+//       margin: 0;
+//       border  : none;
+//       padding : 15px;
+//       margin  : 0;
+//       background: none;
+//       border-bottom: 2px solid blue;
+//       &:focus {
+//         background: rgba(0,0,0,.1);
+//         outline: none;
+//       }
+//       // block__element--modifier
+//       &--city {
+//           border: 1px solid red;
+//       }
+//     }
+//     // block__element
+//     // search btn variation
+//     &__btn {
+//       max-width:50%;
+//       padding: 1em;
+//       background-color: $dream-green;
+//     }
+//   }
+// }
+
+@media screen and (min-width: 768px) {
+  .search {
+    margin: 0 auto;
+  }
+}

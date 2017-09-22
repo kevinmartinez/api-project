@@ -6,172 +6,51 @@ I will try to use the BEM methodology as naming convention,
 but also for trying more advanced uses of Sass.
 I will do my best to split up my Sass content into partials for more modularity,
 for that i will try to follow the SMACSS approach (Scalable and modular CSS).
+
 Big thx to css-tricks and teamtreehouse
 
 */
 
-* {
-  box-sizing: border-box; // global box-model control
-}
 
-body {
-  font-family: 'Droid Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+// ==========================================================================
+// Utilities
+// ==========================================================================
+@import "utils/index";
 
-// media query variable
-$mid: "(min-width 768px)";
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+@import "base/index";
 
-// Text alignment helper class
-.text-center {
-  text-align: center;
-}
-// ::placeholder::focus {
+// ==========================================================================
+// Layout Styles
+// ==========================================================================
+@import "layout/index";
+
+// ==========================================================================
+// Modules
+// ==========================================================================
+@import "modules/index";
+
+// ==========================================================================
+// States
+// ==========================================================================
+//@import "states/index";
+
+
+// Write the Sass directive that instructs the .btn--submit modifier class below to inherit the base styles from %btn-base.
+
+// %btn-base {
+//   padding: em(10px);
 //   color: $white;
+//   font-size: em(14px);
 // }
 
-// Font variables
-$header-main-font: 'Droid Sans', sans-serif;
+// .btn {
+//   &--submit {
 
-// Color variables
-$black: #323A45;
-$dream-green: #78C0A8;
-$yellow-flat: #f1c40f;
-$blue-flat: #2C82C9;
-$green-flat: #53df83;
-$purple-flat: #897FBA;
-
-// Sky color variables
-$clouds: #ECF0F1;
-$clear: #85E2FF;
-$rain: #C4C4C4;
-$storm: #02222B;
-$snow:#F9F8E4;
-$mist: #FEFCFF;
-
-// Font scaling for small/mobile
-h1 {
-  font-size: 1.5em;
-}
-h2 {
-  font-size: 1.2em;
-}
-h3 {
-  font-size: 1.1em;
-}
-p {
-  font-size: 1em;
-}
-
-// Block in (B)EM
-
-// // Everything below is the first BEM code i wrote
-// .search {
-//     border: 5px solid goldenrod;
-// }
-
-// .search__input {
-//     display: block;
-//     width: 100%;
-//     font-size: 1em;
-//     margin: 0;
-//     border  : none;
-//     padding : 15px;
-//     margin  : 0;
-//     background: none;
-// }
-
-// input:focus, textarea:focus {
-//     background: rgba(0,0,0,.1);
-//     border-radius: 5px;
-//     outline: none;
+// @extend %btn-base
+// ;
+//     background: $teal;
 //   }
-
-// .search__btn {
-//     width: 100%;
-//     padding: 1em;
-//     background-color: $dream-green;
 // }
-
-
-// Using Sass parent selectors to write element and modifier classes for my blocks
-
-
-// Block
-.search {
-  border: 5px solid goldenrod;
-  // Block__Element
-  &__input {
-    display: block;
-    width: 100%;
-    font-size: 1em;
-    margin: 0;
-    border  : none;
-    padding : 15px;
-    margin  : 0;
-    background: none;
-    &:focus {
-      background: rgba(0,0,0,.1);
-      border-radius: 5px;
-      outline: none;
-    }
-    // block__element--modifier
-    &--city {
-        border: 1px solid red;
-    }
-  }
-  // block__element
-  // search btn variation
-  &__btn {
-    width: 100%;
-    padding: 1em;
-    background-color: $dream-green;
-  }
-  // // Block--Modifer
-  // &--modifier {
-
-  // }
-}
-
-
-
-/// Block Element
-/// @access public
-/// @param {String} $element - Element's name
-@mixin element($element) {
-  &__#{$element} {
-    @content;
-  }
-}
-
-/// Block Modifier
-/// @access public
-/// @param {String} $modifier - Modifier's name
-@mixin modifier($modifier) {
-  &--#{$modifier} {
-    @content;
-  }
-}
-
-.header {
-  // block
-  font-family: $header-main-font;
-  padding: 2em;
-  @include element('heading') {
-    // block__element
-    // header__heading
-    color: $black;
-    text-transform: uppercase;
-    &::first-letter {
-        color: red;
-    }
-  }
-  // block--modifier
-  // header--sky, change sky according to weather
-  @include modifier('sky') {
-  // background-color: crimson;
-  // background-color: red;
-  // border-bottom: 5px dashed blue;
-  }
-}

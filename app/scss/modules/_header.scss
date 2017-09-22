@@ -1,0 +1,39 @@
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+.header {
+  // block
+  font-family: $header-main-font;
+  padding: 2em;
+  @include element('heading') {
+    // block__element
+    // header__heading
+    color: $black;
+    text-transform: uppercase;
+    &::first-letter {
+        color: blue;
+    }
+  }
+  // block--modifier
+  // header--sky, change sky according to weather
+  @include modifier('sky') {
+  // background-color: crimson;
+  // background-color: red;
+  // border-bottom: 5px dashed blue;
+  }
+}
