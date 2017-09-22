@@ -1,4 +1,4 @@
-# API Project - Shake
+# API Project
 Project description.
 
 ## Live
